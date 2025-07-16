@@ -1,0 +1,295 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Inter', sans-serif; */
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  background-image:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  url("imgs/portada-2.jpg"); 
+  background-size: cover;
+
+}
+
+/* Contenedor principal */
+.container {
+  font-family: Montserrat;
+  font-weight: 300;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.5rem 0;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Encabezado */
+header {
+     /* padding: 2rem 0; */
+  border-bottom: 1px solid #2c2c2c;
+  margin-top: 0;
+  font-family: montserrat;
+  background-color: transparent;
+  color: #f7f7f7;
+  /* padding: 100px 10px; */
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  text-align: center;
+  position: relative; /* Importante para posicionar el nav*/
+  background-image:
+  linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  /* url("imgs/byn-11.jpg");  */
+   background-size: cover;
+  background-position: center -300px;
+  
+}
+
+header:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    /* cursor: pointer; */
+}
+
+.titulo1 {
+    font-family: bebas neue;
+}
+
+h1 {
+
+font-weight: 600;
+  font-size: clamp(30px, 5vw, 60px); /* Esto hará que el tamaño cambie según 
+  el ancho de la pantalla, sin salirse del rango entre 32px y 64px.*/
+   text-shadow:  2px 4px rgba(0, 0, 0, 0.8),
+    0 8px 15px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: aparecer 1s ease-out;
+  margin-bottom: 20px;
+}
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#sobre-mi {
+    background-color: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre-mi:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
+   font-weight: 300;
+    font-size: clamp(20px, 5vw, 45px);
+    text-shadow: 10px 10px 15px rgba(0,0,0,0.8),
+    0 8px 15px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.intro {
+    font-family: montserrat;
+    font-weight: 200;
+}
+
+main h2 {
+    font-family: bebas neue;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+}
+
+/* main h3 {
+    font-family:bebas neue;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 8px 7px 5px rgba(0, 0, 0, 0.5);
+} */
+
+/* nav {
+  font-weight: 300;
+  font-size: clamp(3px, 4vw, 6px);
+  position: absolute;  Posiciona el nav de forma absoluta dentro del header 
+  bottom: 10px;        Distancia desde abajo 
+  left: 40px;          Distancia desde la izquierda 
+  text-shadow: 8px 8px 10px rgba(0,0,0,0.8);
+}
+
+nav a {
+
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+} */
+
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #222;
+  color: #ffffff;
+}
+/* Secciones */
+section {
+  margin: 4rem 0;
+}
+
+section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+}
+
+p, a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.sobre {
+    text-align: center;
+    justify-content: center;
+}
+/* Galería de proyectos */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: transparent;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.5);
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover img {
+  filter: brightness(1.1);
+}
+
+.project-card .info {
+  padding: 1rem;
+}
+
+.project-card .info h3 {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-shadow: 8px 7px 7px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.project-card .info p {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+ 
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-top: 0;
+    padding-top: 1.5rem;
+  }
+
+  body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .modal-content iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      display: block;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    
